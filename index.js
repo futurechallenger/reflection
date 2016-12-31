@@ -17,7 +17,21 @@ MongoClient.connect(url, (err, db) => {
   } 
 
   db.collections((err, collections) => {
-    collections.forEach((c) => console.log(`collection ${c.collectionName}`))
+    collections.forEach((c) => {
+      console.log(`collection ${c.collectionName}`)
+      readDoc(c)
+    })
+
     db.close()
   })
 })
+
+function readDoc(col) {
+  col.find().limit(1).each((err, doc) => {
+    if(doc) {
+      console.log('DOC ===> ', doc)
+    }
+
+    return false 
+  })
+}

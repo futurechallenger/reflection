@@ -1,0 +1,9 @@
+{
+  "name": "reflection",
+  "version": "0.1.0",
+  "description": "export mongoDB collections to json",
+  "main": "index.js",
+  "repository": "https://github.com/futurechallenger/reflection.git",
+  "author": "Uncle Charlie",
+  "license": "MIT"
+}
